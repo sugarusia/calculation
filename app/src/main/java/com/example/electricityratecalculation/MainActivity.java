@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // installSplashScreen()を追加
+        installSplashScreen();
+        setContentView(R.layout.activity_main);
+
         Spinner spinner = findViewById(R.id.spinner);
         Spinner quantitySpinner = findViewById(R.id.quantity_spinner);
         Button button = findViewById(R.id.button);
@@ -64,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
             startActivity(intent);
         });
+    }
+
+    private void installSplashScreen() {
     }
 
     private void updateTextView(TextView textView, String item, int value, int quantity) {
