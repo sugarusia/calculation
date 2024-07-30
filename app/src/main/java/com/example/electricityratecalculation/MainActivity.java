@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         button.setOnClickListener(v -> {
             int calculatedValue = selectedValue * selectedQuantity;
-            saveSelectedValue("selected_value1", calculatedValue);
+            saveSelectedValue(calculatedValue);
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
             startActivity(intent);
         });
@@ -77,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
         textView.setText("Selected: " + item + " (Value: " + value + ", Quantity: " + quantity + ")");
     }
 
-    private void saveSelectedValue(String key, int value) {
+    private void saveSelectedValue(int value) {
         SharedPreferences preferences = getSharedPreferences("MyPreferences", MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putInt(key, value);
+        editor.putInt("selected_value1", value);
         editor.apply();
     }
 }
