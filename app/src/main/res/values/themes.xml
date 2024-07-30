@@ -13,4 +13,9 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.App.SplashOpening" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/teal_200</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/_4ww1</item>
+        <item name="postSplashScreenTheme">@style/Theme.MaterialComponents.DayNight.NoActionBar</item>
+    </style>
 </resources>
